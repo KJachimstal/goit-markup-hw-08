@@ -9,13 +9,39 @@
 
 .menu__list,
 .contact__list {
-    display: flex;
+    display: none;
     gap: 50px;
     position: relative;
 
     li a:hover,
     li a:focus {
         color: $mainPageColor;
+    }
+}
+
+.contact__list {
+    gap: 0;
+    flex-direction: column;
+}
+
+.contact__list li:last-child {
+    margin-top: 10px;
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .menu__list,
+    .contact__list {
+        display: flex;
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .contact__list {
+        flex-direction: row;
+    }
+
+    .contact__list li:last-child {
+        margin: 0 0 0 50px;
     }
 }
 

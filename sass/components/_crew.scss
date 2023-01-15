@@ -13,20 +13,25 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 30px;
     }
 
     &__item {
-        width: 270px;
+        width: 100%;
+        padding: 15px;
+    }
+
+    &__container {
         background: $whiteColor;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
             0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
-    }
+        padding-bottom: 30px;
 
-    &__container {
-        padding: 30px 0;
+        img {
+            width: 100%;
+        }
     }
 
     &__name {
@@ -36,6 +41,7 @@
         text-align: center;
         color: $secondaryPageColor;
         margin-bottom: 10px;
+        padding-top: 30px;
     }
 
     &__position {
@@ -75,6 +81,22 @@
         &:focus {
             background-color: $mainPageColor;
             color: $whiteColor;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .crew {
+        &__item {
+            width: 50%;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .crew {
+        &__item {
+            width: 25%;
         }
     }
 }

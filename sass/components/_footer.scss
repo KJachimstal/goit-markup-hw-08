@@ -2,31 +2,52 @@
     background: $bannerBackgroundColor;
     padding: 60px 0;
 
-    & &__container {
+    &__container {
         display: flex;
+        flex-wrap: wrap;
         align-items: baseline;
-        gap: 70px;
-        width: 1200px;
-        margin: 0 auto;
+        // gap: 70px;
         padding: 0 15px;
+
+        & > div {
+            width: 100%;
+        }
+
+        & > form {
+            width: 100%;
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__list {
-        a {
-            line-height: 1.71;
-        }
+        li {
+            text-align: center;
 
-        & li:first-child a {
-            color: $whiteColor;
-        }
+            a {
+                line-height: 1.71;
+            }
 
-        & li:first-child a:hover,
-        & li:first-child a:focus {
-            color: $mainPageColor;
+            &:first-child a {
+                color: $whiteColor;
+            }
+
+            &:first-child a:hover,
+            &:first-child a:focus {
+                color: $mainPageColor;
+            }
         }
     }
 
     &__item {
+        white-space: nowrap;
         transition-property: color;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 250ms;
@@ -54,6 +75,7 @@
     &__title {
         font-weight: 700;
         line-height: 1.14;
+        text-align: center;
         text-transform: uppercase;
         color: $whiteColor;
         margin-bottom: 20px;
@@ -61,7 +83,12 @@
 
     &__social-media-list {
         display: flex;
+        justify-content: center;
         gap: 10px;
+    }
+
+    &__social-media {
+        margin-top: 60px;
     }
 
     &__social-media &__social-media-icon {
@@ -105,15 +132,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        white-space: nowrap;
+        padding: 13px 26px;
         gap: 24px;
         background: $mainPageColor;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
-        width: 200px;
 
         font-weight: 700;
         font-size: 16px;
-        line-height: 1.87;
         letter-spacing: 0.06em;
         color: $whiteColor;
     }
@@ -124,6 +151,59 @@
 
     &__container {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 12px;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .footer {
+        &__container {
+            & > div {
+                width: 50%;
+            }
+        }
+
+        &__social-media {
+            margin-top: 0;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .footer {
+        &__container {
+            & > div {
+                width: 33.3%;
+            }
+
+            & > form {
+                width: 33.3%;
+                margin-top: 0;
+            }
+        }
+
+        &__title {
+            text-align: left;
+        }
+
+        &__information {
+            align-items: start;
+        }
+
+        &__list li {
+            text-align: left;
+        }
+
+        &__social-media-list {
+            justify-content: start;
+        }
+    }
+
+    .newsletter {
+        &__container {
+            flex-direction: row;
+        }
     }
 }

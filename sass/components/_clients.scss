@@ -10,14 +10,18 @@
 
     &__list {
         display: flex;
-        gap: 30px;
+        flex-wrap: wrap;
+
+        li {
+            padding: 15px;
+            width: 50%;
+        }
     }
 
     &__container {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 170px;
         height: 92px;
         border: 1px solid currentColor;
         border-radius: 4px;
@@ -36,5 +40,22 @@
         width: 106px;
         height: 60px;
         fill: currentColor;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .clients {
+        &__list li {
+            width: 33.3%;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .clients {
+        &__list li {
+            width: auto;
+            flex-grow: 1;
+        }
     }
 }

@@ -1,11 +1,16 @@
 .description {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    // gap: 30px;
     margin: 0 auto;
 
+    li {
+        padding: 15px;
+    }
+
     &__container {
-        width: 270px;
+        width: 100%;
         height: 120px;
         background-color: $buttonColor;
         border-radius: 4px;
@@ -21,10 +26,29 @@
         line-height: 1.14;
         color: $secondaryPageColor;
         margin-bottom: 10px;
+        text-align: center;
     }
 
     &__content {
         line-height: 1.71;
         color: $contactColor;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .description {
+        li {
+            width: 50%;
+        }
+
+        &__subtitle {
+            text-align: left;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .description li {
+        width: 25%;
     }
 }
