@@ -1,17 +1,18 @@
 .banner {
     background-color: $bannerBackgroundColor;
-    padding: 200px 0;
+    // padding: 200px 0;
+    padding: 118px 0;
     text-align: center;
     margin: 0 auto;
     background: linear-gradient(
             $bannerBackgroundColorGradient,
             $bannerBackgroundColorGradient
         ),
-        url('../../images/banner.jpg');
+        url('../../images/banner/header_phone.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 400px;
     max-width: 1600px;
     margin: 0 auto;
 
@@ -44,8 +45,31 @@
     }
 }
 
+@media (min-width: $breakpoint-tablet) {
+    .banner {
+        background: linear-gradient(
+                $bannerBackgroundColorGradient,
+                $bannerBackgroundColorGradient
+            ),
+            url('../../images/banner/header_tablet.jpg');
+        max-width: $breakpoint-tablet;
+
+        &__title {
+            font-size: 44px;
+        }
+    }
+}
+
 @media (min-width: $breakpoint-desktop) {
     .banner {
+        background: linear-gradient(
+                $bannerBackgroundColorGradient,
+                $bannerBackgroundColorGradient
+            ),
+            url('../../images/banner/header_desktop.jpg');
+        height: 600px;
+        max-width: 1600px;
+
         &__title {
             font-size: 44px;
         }

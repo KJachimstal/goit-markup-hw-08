@@ -6,7 +6,6 @@
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
-        // gap: 70px;
         padding: 0 15px;
 
         & > div {
@@ -16,8 +15,6 @@
         & > form {
             width: 100%;
             margin-top: 60px;
-            display: flex;
-            justify-content: center;
         }
     }
 
@@ -125,7 +122,7 @@
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         border-radius: 4px;
-        min-width: 358px;
+        width: 100%;
     }
 
     &__button {
@@ -169,6 +166,12 @@
             margin-top: 0;
         }
     }
+
+    .newsletter {
+        &__input {
+            max-width: 358px;
+        }
+    }
 }
 
 @media (min-width: $breakpoint-desktop) {
@@ -204,6 +207,10 @@
     .newsletter {
         &__container {
             flex-direction: row;
+        }
+
+        &__input {
+            max-width: 358px;
         }
     }
 }

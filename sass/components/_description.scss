@@ -2,11 +2,14 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    // gap: 30px;
     margin: 0 auto;
 
     li {
-        padding: 15px;
+        margin-bottom: 30px;
+    }
+
+    li:last-child {
+        margin-bottom: 0;
     }
 
     &__container {
@@ -39,6 +42,7 @@
     .description {
         li {
             width: 50%;
+            padding: 0 15px 0 15px;
         }
 
         &__subtitle {
