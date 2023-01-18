@@ -8,7 +8,7 @@
             $bannerBackgroundColorGradient,
             $bannerBackgroundColorGradient
         ),
-        url('../../images/banner/header_phone.jpg');
+        url('../images/banner/header_phone.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,11 +51,12 @@
                 $bannerBackgroundColorGradient,
                 $bannerBackgroundColorGradient
             ),
-            url('../../images/banner/header_tablet.jpg');
+            url('../images/banner/header_tablet.jpg');
         max-width: $breakpoint-tablet;
 
         &__title {
-            font-size: 44px;
+            font-size: 26px;
+            max-width: 400px;
         }
     }
 }
@@ -66,7 +67,7 @@
                 $bannerBackgroundColorGradient,
                 $bannerBackgroundColorGradient
             ),
-            url('../../images/banner/header_desktop.jpg');
+            url('../images/banner/header_desktop.jpg');
         height: 600px;
         max-width: 1600px;
 
