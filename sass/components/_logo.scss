@@ -11,10 +11,28 @@
 
     &--menu {
         margin-right: 93px;
-        padding: 24px 0 25px;
+        padding: 15px 0 15px;
     }
 
     &--footer {
         color: $whiteColor;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .logo {
+        &--menu {
+            padding: 24px 0 25px;
+        }
+    
+    }
+}
+
+@media (min-width: $breakpoint-desktop) {
+    .logo {
+        &--menu {
+            padding: 24px 0 25px;
+        }
+    
     }
 }

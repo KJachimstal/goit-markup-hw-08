@@ -1,6 +1,5 @@
 .banner {
     background-color: $bannerBackgroundColor;
-    // padding: 200px 0;
     padding: 118px 0;
     text-align: center;
     margin: 0 auto;
@@ -14,7 +13,6 @@
     background-repeat: no-repeat;
     height: 400px;
     max-width: 1600px;
-    margin: 0 auto;
 
     &-container {
         background-color: $bannerBackgroundColor;
@@ -29,6 +27,7 @@
         color: $whiteColor;
         margin: 0 auto;
         margin-bottom: 30px;
+        width: 396px;
     }
 
     &__button {
@@ -56,7 +55,6 @@
 
         &__title {
             font-size: 26px;
-            max-width: 400px;
         }
     }
 }
@@ -69,10 +67,19 @@
             ),
             url('../images/banner/header_desktop.jpg');
         height: 600px;
-        max-width: 1600px;
+        max-width: 1200px;
+        position: relative;
 
         &__title {
             font-size: 44px;
+            width: 700px;
+            align-items: center;
+        }
+
+        & > .container {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
         }
     }
 }

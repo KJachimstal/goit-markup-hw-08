@@ -42,7 +42,8 @@
 @media (min-width: $breakpoint-tablet) {
     .description {
         li {
-            width: 354px
+            width: 354px;
+            margin-bottom: 0;
         }
 
         &__subtitle {
@@ -53,6 +54,6 @@
 
 @media (min-width: $breakpoint-desktop) {
     .description li {
-        width: 25%;
+        width: 270px;
     }
 }
